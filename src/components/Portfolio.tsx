@@ -3,12 +3,42 @@ import { motion } from 'framer-motion';
 import { HiExternalLink } from 'react-icons/hi';
 
 const projects = [
-  { title: 'Campos & Associados', category: 'Site para Advogado', desc: 'Portal corporativo premium transmitindo autoridade e confiança para o escritório.', tags: ['Next.js', 'Tailwind', 'SEO'] },
-  { title: 'Dra. Marina Psicologia', category: 'Landing Page', desc: 'Página acolhedora com agendamento online integrado para atendimento psicológico.', tags: ['React', 'Calendly', 'Framer'] },
-  { title: 'Essenza Store', category: 'Loja Virtual', desc: 'E-commerce moderno com pagamentos integrados, dashboard e experiência fluida.', tags: ['Next.js', 'Stripe', 'Prisma'] },
-  { title: 'Grupo Horizonte', category: 'Site Corporativo', desc: 'Portal multi-negócios com blog, área do cliente e gestão de conteúdo.', tags: ['React', 'Node.js', 'MongoDB'] },
-  { title: 'Sabor & Arte', category: 'Restaurante Delivery', desc: 'Cardápio digital interativo com pedidos online e integração com delivery.', tags: ['React', 'WhatsApp API', 'iFood'] },
-  { title: 'MedClinic Saúde', category: 'Site para Médico', desc: 'Plataforma completa com agendamento, telemedicina e prontuário digital.', tags: ['Next.js', 'TypeScript', 'Prisma'] },
+  {
+    title: 'Container Market',
+    category: 'Lading page',
+    desc: 'Site para empresa no ramo de mercados autonômos, com rediredcionamento watsapp, forms e DNS configurado',
+    tags: ['Next.js', 'Tailwind', 'SEO'],
+  image: '/images/projects/container-market.png',
+  link: 'https://containermarket.com.br'
+},
+  {
+    title: 'SKR SHOES',
+    category: 'Loja Virtual',
+    desc: 'E-commerce moderno com pagamentos integrados, dashboard e experiência fluida.',
+    tags: ['Shopfy', 'Stripe', 'Prisma'],
+    image: '/images/projects/skrs-shoes.png'
+  },
+  {
+    title: 'falta add ',
+    category: 'Site Corporativo',
+    desc: 'Portal multi-negócios com blog, área do cliente e gestão de conteúdo.',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    image: '/projects/site-corporativo.png'
+  },
+  {
+    title: 'falta add',
+    category: 'Restaurante Delivery',
+    desc: 'Cardápio digital interativo com pedidos online e integração com delivery.',
+    tags: ['React', 'WhatsApp API', 'iFood'],
+    image: '/projects/restaurante.png'
+  },
+  {
+    title: 'falta add',
+    category: 'Site para Médico',
+    desc: 'Plataforma completa com agendamento, telemedicina e prontuário digital.',
+    tags: ['Next.js', 'TypeScript', 'Prisma'],
+    image: '/projects/medico.png'
+  },
 ];
 
 export default function Portfolio() {
@@ -49,21 +79,12 @@ export default function Portfolio() {
                 hoveredIndex === i ? 'border-[#3B82F6]/40' : ''
               } ${hoveredIndex !== null && hoveredIndex !== i ? 'opacity-40' : ''}`}
             >
-              <div className="h-40 sm:h-44 bg-[#0D1117] relative overflow-hidden flex items-center justify-center">
-                <div className="w-full h-full p-4 flex flex-col gap-2.5">
-                  <div className="flex gap-2 mb-0.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#3B82F6]/40" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white/8" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white/6" />
-                  </div>
-                  <div className="h-2.5 w-3/4 rounded-full bg-white/6" />
-                  <div className="h-2.5 w-1/2 rounded-full bg-white/3" />
-                  <div className="grid grid-cols-3 gap-2 mt-1.5">
-                    <div className="h-12 rounded-lg bg-white/[0.03] border border-white/5" />
-                    <div className="h-12 rounded-lg bg-white/[0.03] border border-white/5" />
-                    <div className="h-12 rounded-lg bg-white/[0.03] border border-white/5" />
-                  </div>
-                </div>
+<div className="aspect-[16/9] bg-[#0D1117] relative overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover object-center"
+  />
                 <div className={`absolute inset-0 bg-[#1A1F2E]/85 hidden sm:flex items-center justify-center transition-opacity duration-300 ${hoveredIndex === i ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#2563EB] text-white text-sm font-medium shadow-lg">
                     Ver projeto completo
